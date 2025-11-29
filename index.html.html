@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Studio Luna Beauty</title>
+  <!-- Tailwind CDN (play-safe: for prototyping only) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root{
+      --rosa-queimado: #e8b2b8;
+      --creme: #fff7f3;
+      --preto-soft: #333333;
+      --dourado: #d6b98c;
+    }
+    /* small utilities that make colors easier with Tailwind classes */
+    .bg-rosa-queimado{ background-color:var(--rosa-queimado); }
+    .text-preto-soft{ color:var(--preto-soft); }
+    .text-dourado{ color:var(--dourado); }
+    .bg-creme{ background-color:var(--creme); }
+  </style>
+</head>
+<body class="antialiased text-preto-soft bg-creme">
+  <!-- Header -->
+  <header class="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <div class="w-12 h-12 rounded-full bg-rosa-queimado flex items-center justify-center text-white font-semibold">L</div>
+      <div>
+        <h1 class="text-xl font-semibold">Luna Beauty Studio</h1>
+        <p class="text-sm text-gray-600">Estética • Confiança • Resultado</p>
+      </div>
+    </div>
+    <div>
+      <a href="#agendar" class="inline-block px-4 py-2 rounded-md border border-rosa-queimado bg-white text-rosa-queimado font-medium hover:bg-rosa-queimado hover:text-white transition">Agendar agora</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-8 items-center py-12">
+      <div class="space-y-6">
+        <h2 class="text-4xl md:text-5xl font-bold">Brilhe do seu jeito.</h2>
+        <p class="text-lg text-gray-700">Tratamentos de estética que realçam sua beleza natural — com cuidado, conforto e resultados visíveis desde a primeira sessão.</p>
+        <div class="flex gap-4 items-center">
+          <a href="#agendar" class="px-6 py-3 rounded-md bg-rosa-queimado text-white font-semibold shadow">Quero agendar</a>
+          <a href="#servicos" class="px-6 py-3 rounded-md border border-gray-200 bg-white text-preto-soft font-medium">Ver serviços</a>
+        </div>
+      </div>
+      <div class="relative">
+        <img src="https://images.pexels.com/photos/3769715/pexels-photo-3769715.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Mulher em ambiente de estética" class="rounded-xl shadow-lg w-full object-cover h-80 md:h-96" />
+        <div class="absolute bottom-4 left-4 bg-white/80 backdrop-blur-sm rounded-md px-4 py-2 text-sm">Atendimento personalizado • Agende seu horário</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Serviços -->
+  <section id="servicos" class="max-w-6xl mx-auto px-6 py-12">
+    <h3 class="text-2xl font-semibold mb-6">Nossos principais serviços</h3>
+    <div class="grid md:grid-cols-4 gap-6">
+      <!-- card -->
+      <article class="bg-white rounded-xl p-4 shadow hover:shadow-lg transition">
+        <img src="https://images.pexels.com/photos/3768152/pexels-photo-3768152.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Limpeza de pele" class="h-40 w-full object-cover rounded-md mb-4">
+        <h4 class="font-semibold">Limpeza de Pele Profunda</h4>
+        <p class="text-sm text-gray-600 mt-2">Resultados rápidos, pele renovada e toque profissional.</p>
+      </article>
+
+      <article class="bg-white rounded-xl p-4 shadow hover:shadow-lg transition">
+        <img src="https://images.pexels.com/photos/4252493/pexels-photo-4252493.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Design de sobrancelhas" class="h-40 w-full object-cover rounded-md mb-4">
+        <h4 class="font-semibold">Design de Sobrancelhas</h4>
+        <p class="text-sm text-gray-600 mt-2">Precisão para realçar sua expressão natural.</p>
+      </article>
+
+      <article class="bg-white rounded-xl p-4 shadow hover:shadow-lg transition">
+        <img src="https://images.pexels.com/photos/4058400/pexels-photo-4058400.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Lash lifting" class="h-40 w-full object-cover rounded-md mb-4">
+        <h4 class="font-semibold">Lash Lifting</h4>
+        <p class="text-sm text-gray-600 mt-2">Curvatura natural, efeito marcante.</p>
+      </article>
+
+      <article class="bg-white rounded-xl p-4 shadow hover:shadow-lg transition">
+        <img src="https://images.pexels.com/photos/3918610/pexels-photo-3918610.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Depilação" class="h-40 w-full object-cover rounded-md mb-4">
+        <h4 class="font-semibold">Depilação Egípcia</h4>
+        <p class="text-sm text-gray-600 mt-2">Pele lisinha sem irritar.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Antes & Depois (carousel) -->
+  <section class="max-w-6xl mx-auto px-6 py-12">
+    <h3 class="text-2xl font-semibold mb-6">Resultados que falam por si.</h3>
+    <div class="relative">
+      <div id="carousel" class="overflow-hidden rounded-xl shadow">
+        <div class="flex transition-transform duration-500" style="width:400%">
+          <img class="w-full object-cover h-72" src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="antes depois 1">
+          <img class="w-full object-cover h-72" src="https://images.pexels.com/photos/3771081/pexels-photo-3771081.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="antes depois 2">
+          <img class="w-full object-cover h-72" src="https://images.pexels.com/photos/3760076/pexels-photo-3760076.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="antes depois 3">
+          <img class="w-full object-cover h-72" src="https://images.pexels.com/photos/3768096/pexels-photo-3768096.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="antes depois 4">
+        </div>
+      </div>
+      <div class="flex justify-center gap-3 mt-4">
+        <button id="prev" class="px-3 py-2 rounded-full border">◀</button>
+        <button id="next" class="px-3 py-2 rounded-full border">▶</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre -->
+  <section class="max-w-6xl mx-auto px-6 py-12 bg-white rounded-xl shadow">
+    <div class="md:flex gap-8 items-center">
+      <img src="https://images.pexels.com/photos/3775533/pexels-photo-3775533.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Profissional" class="w-48 h-48 object-cover rounded-full shadow-md">
+      <div>
+        <h3 class="text-2xl font-semibold">Acreditamos que cada detalhe importa</h3>
+        <p class="mt-4 text-gray-700">Cada atendimento é personalizado para você se sentir confiante, cuidada e ainda mais bonita. Técnicas modernas, ambiente acolhedor e atenção aos mínimos detalhes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Depoimentos -->
+  <section class="max-w-6xl mx-auto px-6 py-12">
+    <h3 class="text-2xl font-semibold mb-6">O que nossas clientes dizem</h3>
+    <div class="grid md:grid-cols-3 gap-6">
+      <blockquote class="bg-white p-6 rounded-xl shadow">
+        <p class="italic">"Melhor experiência da minha vida. A pele ficou renovada e a atenção foi impecável."</p>
+        <footer class="mt-4 text-sm text-gray-600">— Marina S.</footer>
+      </blockquote>
+      <blockquote class="bg-white p-6 rounded-xl shadow">
+        <p class="italic">"Profissional super cuidadosa. Indicaria para todas as minhas amigas."</p>
+        <footer class="mt-4 text-sm text-gray-600">— Camila R.</footer>
+      </blockquote>
+      <blockquote class="bg-white p-6 rounded-xl shadow">
+        <p class="italic">"Ambiente lindo e resultados visíveis. Vou voltar sempre."</p>
+        <footer class="mt-4 text-sm text-gray-600">— Júlia M.</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- CTA final -->
+  <section id="agendar" class="max-w-6xl mx-auto px-6 py-12">
+    <div class="bg-rosa-queimado rounded-xl p-8 text-white flex flex-col md:flex-row items-center justify-between gap-6">
+      <div>
+        <h3 class="text-2xl font-bold">Sua melhor versão começa aqui.</h3>
+        <p class="mt-2">Agende pelo WhatsApp e garanta horário com prioridade.</p>
+      </div>
+      <div class="flex gap-4">
+        <a href="https://wa.me/550000000000" target="_blank" class="px-6 py-3 rounded-md bg-white text-rosa-queimado font-semibold">Agendar pelo WhatsApp</a>
+        <a href="#" class="px-6 py-3 rounded-md border border-white/60">Ligar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="max-w-6xl mx-auto px-6 py-8 text-center text-sm text-gray-600">
+    © Studio Luna Beauty • Todos os direitos reservados
+  </footer>
+
+  <script>
+    // Carousel minimal
+    (function(){
+      const carousel = document.querySelector('#carousel > div');
+      const slides = carousel.children.length;
+      let index = 0;
+      const prevBtn = document.getElementById('prev');
+      const nextBtn = document.getElementById('next');
+
+      function show(i){
+        if(i<0) i = slides-1;
+        if(i>=slides) i = 0;
+        index = i;
+        const percent = -(100 * index);
+        carousel.style.transform = 'translateX(' + percent + '%)';
+      }
+
+      prevBtn.addEventListener('click',()=> show(index-1));
+      nextBtn.addEventListener('click',()=> show(index+1));
+
+      // auto slide
+      let auto = setInterval(()=> show(index+1), 5000);
+      [prevBtn,nextBtn,carousel].forEach(el => el.addEventListener('mouseenter', ()=> clearInterval(auto)));
+      [prevBtn,nextBtn,carousel].forEach(el => el.addEventListener('mouseleave', ()=> auto = setInterval(()=> show(index+1), 5000)));
+    })();
+  </script>
+</body>
+</html>
